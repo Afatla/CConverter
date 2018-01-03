@@ -2,4 +2,4 @@ Za³o¿enia:
 1.plik tekstowy w formacie: Waluta1;Waluta2;przelicznik
 			    Waluta2;Waluta1;przelicznik
 2.klasa Currencies zawieraj¹ca s³ownik ze sklejonymi walutami i przelicznikiem jako value
-3.
+3. test
