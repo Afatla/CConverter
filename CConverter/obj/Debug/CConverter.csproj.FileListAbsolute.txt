@@ -1,0 +1,6 @@
+E:\AGA\Siszarp\CConverter\CConverter\bin\Debug\CConverter.exe.config
+E:\AGA\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csprojResolveAssemblyReference.cache
+E:\AGA\Siszarp\CConverter\CConverter\bin\Debug\CConverter.exe
+E:\AGA\Siszarp\CConverter\CConverter\bin\Debug\CConverter.pdb
+E:\AGA\Siszarp\CConverter\CConverter\obj\Debug\CConverter.exe
+E:\AGA\Siszarp\CConverter\CConverter\obj\Debug\CConverter.pdb
