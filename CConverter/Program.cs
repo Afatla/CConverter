@@ -10,7 +10,6 @@ namespace CConverter
     {
         static void Main(string[] args)
         {
-
             Console.ReadKey();
         }
     }
