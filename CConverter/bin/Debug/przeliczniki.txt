@@ -1,0 +1,2 @@
+Waluta1;Waluta2;2
+Waluta3;Waluta2;3

@@ -7,3 +7,9 @@ E:\AGA\Siszarp\CConverter\CConverter\obj\Debug\CConverter.pdb
 E:\AGA studia\Programowanie\CConverter2\CConverter\bin\Debug\CConverter.exe.config
 E:\AGA studia\Programowanie\CConverter2\CConverter\obj\Debug\CConverter.exe
 E:\AGA studia\Programowanie\CConverter2\CConverter\obj\Debug\CConverter.pdb
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\bin\Debug\CConverter.exe.config
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.exe
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.pdb
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\bin\Debug\CConverter.exe
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\bin\Debug\CConverter.pdb
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csprojResolveAssemblyReference.cache

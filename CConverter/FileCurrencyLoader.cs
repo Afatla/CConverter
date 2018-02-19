@@ -10,33 +10,38 @@ namespace CConverter
     {
         public string Filepath { get; set; }
         private string[] _data;
-        private string p;
         public FileCurrencyLoader()
         {
-            this._data = new string[3];
+            this._data = new string[3]; 
         }
 
         public FileCurrencyLoader(string p)
         {
-            // TODO: Complete member initialization
-            this.p = p;
+            this.Filepath = p;
+        }
+
+        public void LoadFromFile(string firstname, string secondname)
+        {
+            var source = File.ReadAllLines(this.Filepath);
+            var czy=0;
+            foreach (var line in source)
+            {
+                if (line.StartsWith(firstname + ";" + secondname)) //nie czyta tutaj!!!!!!!!
+                {
+                    czy = 1;
+                    _data = line.Split(';');
+
+                }
+                else
+                {
+                    czy = 0;
+                }
+            }
+            
         }
         public double GetConverter()
         {
             return double.Parse(_data[2]);
-        }
-        public void LoadFromFile(string firstname, string secondname)
-        {
-            var source = File.ReadAllLines(this.Filepath);
-            foreach (var line in source)
-            {
-                if (line.StartsWith(firstname + ";" + secondname))
-                {
-                    _data=line.Split(';');
-                    
-                }
-            }
-            
         }
     }
 }

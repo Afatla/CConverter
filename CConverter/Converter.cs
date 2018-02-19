@@ -14,23 +14,18 @@ namespace CConverter
         public Converter() 
         { 
             this.LCurrencies = new List<Currencies>();
-            this.Cloader = new FileCurrencyLoader("file.txt");
+            this.Cloader = new FileCurrencyLoader("przeliczniki.txt");
         }
-
 
         public double convert(string firstname, string secondname, double amount)
         {
-            
             foreach (var currencies in LCurrencies)
             {
                 if (currencies.Data.ContainsKey(firstname+';'+secondname))
                 {
                     return amount * currencies.Data[firstname + ';' + secondname];
-                   
                 }
-                
                     break;
-                
             }
             this.Cloader.LoadFromFile(firstname, secondname);
             return amount * this.Cloader.GetConverter();
