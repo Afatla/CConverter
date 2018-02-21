@@ -11,7 +11,7 @@ namespace CConverter
         static void Main(string[] args)
         {
             Converter c = new Converter();
-            var liczba=c.convert("waluta1", "waluta2", 4);
+            var liczba=c.convert("Waluta1", "Waluta2", 4);
             Console.WriteLine(liczba);
             Console.ReadKey();
         }

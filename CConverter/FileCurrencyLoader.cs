@@ -23,25 +23,31 @@ namespace CConverter
         public void LoadFromFile(string firstname, string secondname)
         {
             var source = File.ReadAllLines(this.Filepath);
-            var czy=0;
+            
             foreach (var line in source)
             {
-                if (line.StartsWith(firstname + ";" + secondname)) //nie czyta tutaj!!!!!!!!
+                if (line.StartsWith(firstname + ";" + secondname))
                 {
-                    czy = 1;
+                    
                     _data = line.Split(';');
 
                 }
-                else
-                {
-                    czy = 0;
-                }
+              
             }
             
         }
         public double GetConverter()
         {
-            return double.Parse(_data[2]);
+            
+            try
+            {
+                return double.Parse(_data[2]);
+            }
+            catch
+            {
+                Console.Write("there's no data :( ");
+                return 0;           
+            }
         }
     }
 }
