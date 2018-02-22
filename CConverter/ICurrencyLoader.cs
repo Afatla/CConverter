@@ -10,5 +10,6 @@ namespace CConverter
     {
         void LoadFromFile(string firstname, string secondname);
         double GetConverter();
+        string[] _data { get; set; }
     }
 }

@@ -29,6 +29,9 @@ namespace CConverter
                     
             }
             this.Cloader.LoadFromFile(firstname, secondname);
+            Currency currency = new Currency();
+            currency.Data.Add(this.Cloader._data[0] + ";" + this.Cloader._data[1], this.Cloader.GetConverter());
+            this.Currencies.Add(currency);
             return amount * this.Cloader.GetConverter();
         }
     }

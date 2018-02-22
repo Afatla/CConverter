@@ -8,8 +8,8 @@ namespace CConverter
 {
     class FileCurrencyLoader:ICurrencyLoader
     {
-        public string Filepath { get; set; }
-        private string[] _data;
+        private string Filepath { get; set; }
+        public string[] _data { get; set; }
         public FileCurrencyLoader()
         {
             this._data = new string[3];
@@ -30,9 +30,8 @@ namespace CConverter
                 {
                     if (line.StartsWith(firstname + ";" + secondname))
                     {
-
                         _data = line.Split(';');
-
+                        
                     }
 
                 }
