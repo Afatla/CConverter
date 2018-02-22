@@ -16,3 +16,7 @@ E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csprojRe
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.ConverterWindow.resources
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csproj.GenerateResource.Cache
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.WindowErrorLogger.resources
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\WPFErrorLogger.baml
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\WPFErrorLogger.g.cs
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter_MarkupCompile.cache
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.g.resources
