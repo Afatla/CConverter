@@ -10,12 +10,13 @@ namespace CConverter
     {
         public List<Currency> Currencies{get; set;}
         public ICurrencyLoader Cloader{get;set;}
-        
+        public IErrorLogger el;
 
         public Converter() 
         { 
             this.Currencies = new List<Currency>();
             this.Cloader = new FileCurrencyLoader("przeliczniki.txt");
+            this.el = new WindowErrorLogger();
         }
 
         public double convert(string firstname, string secondname, double amount)
@@ -33,7 +34,7 @@ namespace CConverter
             }
             catch (ArgumentNullException e)
             {
-                Console.WriteLine(e.Message);
+               el.ShowMessage(e.Message);
             }
             this.Cloader.LoadFromFile(firstname, secondname);
             Currency currency = new Currency();

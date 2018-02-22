@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace CConverter
 {
-    class Program
+    class WindowProgram:IProgram
     {
-        static void Main(string[] args)
+        public void Start()
         {
-            IProgram program = new WindowProgram();
-            program.Start();
- 
+            ConverterWindow cw = new ConverterWindow();
+            cw.ShowDialog();
         }
     }
 }

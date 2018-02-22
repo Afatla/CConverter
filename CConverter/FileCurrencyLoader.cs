@@ -10,10 +10,11 @@ namespace CConverter
     {
         private string Filepath { get; set; }
         public string[] _data { get; set; }
+        public IErrorLogger el;
         public FileCurrencyLoader()
         {
             this._data = new string[3];
-            
+            this.el = new WindowErrorLogger();
         }
 
         public FileCurrencyLoader(string p)
@@ -30,43 +31,38 @@ namespace CConverter
                 {
                     if (line.StartsWith(firstname + ";" + secondname))
                     {
-                        _data = line.Split(';');
-                        
+                        _data = line.Split(';'); 
                     }
-
                 }
             }
             catch (FileNotFoundException e)
             {
-                Console.WriteLine(e.Message);
+                el.ShowMessage(e.Message);
             }
             catch (ArgumentNullException e)
             {
-                Console.WriteLine(e.Message);
-            }
-            
-            
+                el.ShowMessage(e.Message);
+            }  
         }
         public double GetConverter()
         {
-
             try
             {
                 return double.Parse(_data[2]);
             }
             catch (NullReferenceException e)
             {
-                Console.WriteLine(e.Message);
+                el.ShowMessage(e.Message);
                 return 0;
             }
             catch (ArgumentNullException e)
             {
-                Console.WriteLine(e.Message);
+                el.ShowMessage(e.Message);
                 return 0;
             }
             catch (FormatException e)
             {
-                Console.WriteLine(e.Message);
+                el.ShowMessage(e.Message);
                 return 0;
             }
         }

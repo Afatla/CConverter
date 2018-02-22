@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace CConverter
 {
-    class Program
+    class ConsoleErrorLogger:IErrorLogger
     {
-        static void Main(string[] args)
+        public void ShowMessage(string message)
         {
-            IProgram program = new WindowProgram();
-            program.Start();
- 
+            Console.WriteLine(message);
         }
     }
 }

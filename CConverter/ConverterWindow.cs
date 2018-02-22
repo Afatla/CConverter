@@ -16,7 +16,7 @@ namespace CConverter
         public ConverterWindow()
         {
             InitializeComponent();
-           
+            
         }
 
         private void ConverterWindow_Load(object sender, EventArgs e)
@@ -26,6 +26,7 @@ namespace CConverter
 
         private void button1_Click(object sender, EventArgs e)
         {
+            IErrorLogger el = new WindowErrorLogger();
             Converter converter = new Converter();
             if (this.textBox1.Text != null && 
                 this.comboBox1.SelectedItem!=null && 
@@ -39,7 +40,7 @@ namespace CConverter
                 }
                 catch (ArgumentNullException ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    el.ShowMessage(ex.Message);
                 }
             }
         }

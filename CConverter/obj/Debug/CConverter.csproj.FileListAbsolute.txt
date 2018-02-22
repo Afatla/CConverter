@@ -15,3 +15,4 @@ E:\AGA\Programowanie\Siszarp\CConverter\CConverter\bin\Debug\CConverter.pdb
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csprojResolveAssemblyReference.cache
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.ConverterWindow.resources
 E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.csproj.GenerateResource.Cache
+E:\AGA\Programowanie\Siszarp\CConverter\CConverter\obj\Debug\CConverter.WindowErrorLogger.resources
