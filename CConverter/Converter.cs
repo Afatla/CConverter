@@ -20,13 +20,20 @@ namespace CConverter
 
         public double convert(string firstname, string secondname, double amount)
         {
-            foreach (var currencies in Currencies)
+            try
             {
-                if (currencies.Data.ContainsKey(firstname+';'+secondname))
+                foreach (var currencies in Currencies)
                 {
-                    return amount * currencies.Data[firstname + ';' + secondname];
+                    if (currencies.Data.ContainsKey(firstname + ';' + secondname))
+                    {
+                        return amount * currencies.Data[firstname + ';' + secondname];
+                    }
+
                 }
-                    
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine(e.Message);
             }
             this.Cloader.LoadFromFile(firstname, secondname);
             Currency currency = new Currency();

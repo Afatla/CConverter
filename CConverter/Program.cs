@@ -10,10 +10,10 @@ namespace CConverter
     {
         static void Main(string[] args)
         {
-            Converter c = new Converter();
-            var liczba=c.convert("Waluta3", "Waluta2", 4);
-            Console.WriteLine(liczba);
-            Console.ReadKey();
+            ConverterWindow cw = new ConverterWindow();
+            
+            cw.ShowDialog();
+            
         }
     }
 }
