@@ -12,7 +12,8 @@ namespace CConverter
         private string[] _data;
         public FileCurrencyLoader()
         {
-            this._data = new string[3]; 
+            this._data = new string[3];
+            
         }
 
         public FileCurrencyLoader(string p)
@@ -22,31 +23,52 @@ namespace CConverter
 
         public void LoadFromFile(string firstname, string secondname)
         {
-            var source = File.ReadAllLines(this.Filepath);
-            
-            foreach (var line in source)
+            try
             {
-                if (line.StartsWith(firstname + ";" + secondname))
+                var source = File.ReadAllLines(this.Filepath);
+                foreach (var line in source)
                 {
-                    
-                    _data = line.Split(';');
+                    if (line.StartsWith(firstname + ";" + secondname))
+                    {
+
+                        _data = line.Split(';');
+
+                    }
 
                 }
-              
             }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
             
         }
         public double GetConverter()
         {
-            
+
             try
             {
                 return double.Parse(_data[2]);
             }
-            catch
+            catch (NullReferenceException e)
             {
-                Console.Write("there's no data :( ");
-                return 0;           
+                Console.WriteLine(e.Message);
+                return 0;
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine(e.Message);
+                return 0;
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+                return 0;
             }
         }
     }

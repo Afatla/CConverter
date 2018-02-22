@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace CConverter
 {
-    class Currencies:ICurrencies
+    class Currency:ICurrency
     {
-        //public string Name { get; set; }
         public Dictionary<string, double> Data { get; set; }
 
-        public Currencies()
+        public Currency()
         {
             this.Data = new Dictionary<string, double>();
         }
-
 
     }
 }

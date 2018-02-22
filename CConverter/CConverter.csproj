@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converter.cs" />
-    <Compile Include="Currencies.cs" />
+    <Compile Include="Currency.cs" />
     <Compile Include="FileCurrencyLoader.cs" />
     <Compile Include="IConverter.cs" />
-    <Compile Include="ICurrencies.cs" />
+    <Compile Include="ICurrency.cs" />
     <Compile Include="ICurrencyLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
